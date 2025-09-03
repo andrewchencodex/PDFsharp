@@ -65,9 +65,13 @@ namespace PdfSharp.Pdf
         }
 
         /// <summary>
-        /// Gets the producer application (for example, PDFsharp).
+        /// Gets or sets the producer application (for example, PDFsharp).
         /// </summary>
-        public string Producer => Elements.GetString(Keys.Producer);
+        public string Producer
+        {
+            get => Elements.GetString(Keys.Producer);
+            set => Elements.SetString(Keys.Producer, value);
+        }
 
         /// <summary>
         /// Gets or sets the creation date of the document.
